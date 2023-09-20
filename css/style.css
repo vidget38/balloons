@@ -437,6 +437,58 @@ body {
   z-index: -1;
 }
 
+.booking {
+  height: 50rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 57%, rgba(186, 133, 80, 0.8) 57%, rgba(161, 79, 3, 0.8) 100%), url("../img/bg-form.jpg") center/cover no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.form {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  width: 60%;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.form__input {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #000000;
+  padding: 2rem 0rem 2rem 2rem;
+  background: #ffffff;
+  border: none;
+  border-bottom: 0.3rem solid transparent;
+  border-radius: 0.5rem;
+  width: 55%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.3rem solid #66d763;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.3rem solid #d76363;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.form__label {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: 0.7s all;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -510,7 +562,7 @@ body {
 
 .section-adventure {
   padding: 21rem 0;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/section-adventure.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7)), url("../img/section-adventure.jpg") center/cover no-repeat;
   transform: skewY(7deg);
 }
 .section-adventure > * {
@@ -525,4 +577,9 @@ body {
 .section-feedBack {
   padding: 8rem 0rem;
   position: relative;
+}
+
+.section-booking {
+  padding: 10rem;
+  background: linear-gradient(90deg, #BA8554, #A14F03);
 }
