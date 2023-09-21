@@ -148,7 +148,7 @@ body {
   margin-bottom: 8rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -159,6 +159,7 @@ body {
   transition: all 0.3s;
   position: relative;
   font-size: 2rem;
+  border: none;
 }
 .btn:hover {
   transform: translateY(-0.4rem);
@@ -188,6 +189,14 @@ body {
 .btn_animated {
   animation: BtnToUp 0.5s ease-out 0.7s;
   animation-fill-mode: backwards;
+}
+
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #ffffff;
+}
+.btn_brown::after {
+  background: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -446,12 +455,15 @@ body {
 }
 
 .form {
+  width: 60%;
   padding-top: 5rem;
   padding-left: 5rem;
-  width: 60%;
 }
 .form__group:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
 }
 .form__input {
   font-size: 1.6rem;
@@ -463,7 +475,7 @@ body {
   border: none;
   border-bottom: 0.3rem solid transparent;
   border-radius: 0.5rem;
-  width: 55%;
+  width: 75%;
 }
 .form__input:focus {
   outline: none;
@@ -481,12 +493,51 @@ body {
   display: block;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  transition: 0.7s all;
+  transition: 0.2s all;
 }
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3rem);
+}
+.form__group-radio {
+  width: 75%;
+  display: inline-block;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s all;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
 
 .header {
