@@ -501,7 +501,7 @@ body {
   transform: translateY(-3rem);
 }
 .form__group-radio {
-  width: 75%;
+  width: 45%;
   display: inline-block;
 }
 .form__input-radio {
